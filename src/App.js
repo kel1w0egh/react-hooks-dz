@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Film from "./components/Film";
+import ColorChange from "./components/ColorChange";
+import Quote from "./components/Quote";
 
 function App() {
+  const posterURL = 'https://upload.wikimedia.org/wikipedia/ru/thumb/5/53/The_Lord_of_the_Rings._The_Return_of_the_King_%E2%80%94_movie.jpg/211px-The_Lord_of_the_Rings._The_Return_of_the_King_%E2%80%94_movie.jpg';
+  const producer = 'Питер Джексон';
+  const filmActors = ['Иэн Маккеллен', 'Вигго Мортенсен', 'Элайджа Вуд', 'Шон Эстин', 'Энди Серкис', 'Орландо Блум', 'Билли Бойд'];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Задание №1</h1>
+      <Film filmPoster={posterURL} producerName={producer} releaseYear={"2003"} actors={filmActors}/>
+      <h1>Задание №2</h1>
+      <ColorChange />
+        <h1>Задание №4</h1>
+        <Quote />
     </div>
   );
 }
